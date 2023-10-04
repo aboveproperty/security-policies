@@ -1,0 +1,66 @@
+site_name: 'Above Property Security PSP'
+site_description: 'Above Property Security Policies, Standards, and Procedures'
+site_url: 'https://aboveproperty.com/security'
+site_author: 'Above Property Systems, LLC.'
+
+theme:
+  name: material
+  theme_dir: 'custom_theme'
+  include_sidebar: false
+  palette:
+    primary: ''
+    accent: ''
+  favicon: 'assets/images/favicon.ico'
+  logo: 'assets/images/logo.svg'
+
+# Enable custom.css
+extra_css:
+  - 'assets/css/custom.css'
+
+plugins:
+  - search
+  - with-pdf:
+      cover_subtitle: Security Policies, Standards, and Procedures
+
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: true
+  - sane_lists
+  - admonition
+  - codehilite:
+      guess_lang: false
+nav:
+- 'Home': 'index.md'
+- 'Security Program Overview': 'program.md'
+- 'Corporate Governance': 'corp-gov.md'
+- 'Policy Management': 'policy-mgmt.md'
+- 'Security Architecture and Operating Model': 'model.md'
+- 'Roles, Responsibilities and Training': 'rar.md'
+- 'Risk Management and Risk Assessment Process': 'risk-mgmt.md'
+- 'Compliance Audits and External Communications': 'compliance-audit.md'
+- 'System Audits, Monitoring and Assessments': 'system-audit.md'
+- 'HR and Personnel Security': 'hr.md'
+- 'Access': 'access.md'
+- 'Facility Access and Physical Security': 'facility.md'
+- 'Asset Inventory Management': 'asset-mgmt.md'
+- 'Data Management': 'data-mgmt.md'
+- 'Data Protection': 'data-protection.md'
+- 'Secure Software Development and Product Security': 'sdlc.md'
+- 'Configuration and Change Management': 'ccm.md'
+- 'Threat Detection and Prevention': 'threat.md'
+- 'Vulnerability Management': 'vuln-mgmt.md'
+- 'Mobile Device Security and Media Management': 'mdm.md'
+- 'Business Continuity and Disaster Recovery': 'bcdr.md'
+- 'Incident Response': 'ir.md'
+- 'Breach Investigation and Notification': 'breach.md'
+- 'Third Party Security and Vendor Risk Management': 'vendor.md'
+- 'Privacy Practice and Consent': 'privacy.md'
+- 'Addendum and References': 'ref.md'
+- 'Appendix A. Employee Handbook': 'employee-handbook.md'
+- 'Appendix B. Approved Software': 'approved-software.md'
+- 'Appendix C. Approved Vendors': 'approved-vendors.md'
+- 'Appendix D. Key Definitions': 'definitions.md'
+- 'Appendix E. Privacy Policy': 'privacy-policy.md'
+- 'Appendix F. Cookie Policy': 'cookie-policy.md'
+- 'Appendix G. GDPR Data Processing Agreement': 'gdpr-dpa.md'
