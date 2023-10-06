@@ -22,7 +22,7 @@
     "mkdocsLogoURL": "",
     "mkdocsThemeColorPrimary": "",
     "mkdocsThemeColorAccent": "",
-    "securityPolicyURL": "https://aboveproperty.com/policies",
+    "securityPolicyURL": "https://compliance.aboveproperty.com/",
     "privacyPolicyURL": "https://aboveproperty.com/policies/privacy-policy",
     "cookiePolicyURL": "https://aboveproperty.com/policies/cookie-policy",
     "sourceControl": "GitHub",
@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-06:11:39:49-MST"
+    "currentRevision": "Last Reviewed: 2023-10-06:11:41:35-MST"
   },
   "standards": [
     {
@@ -1192,10 +1192,10 @@
       "file": "procedures/cp-access-sso.md",
       "name": "Centralized Access Control and Single Sign On",
       "type": "technical",
-      "provider": "Microsoft 365",
+      "provider": "Google Workspaces",
       "function": "SSO",
       "summary": "Access to business systems and applications is centrally managed via single sign on (SSO) when possible.",
-      "guidance": "Your organization most likely relies on multiple business applications to support its operations. This may include end-user systems, collaboration tools, development and production environments, etc. Managing access to all of your business applications and systems centrally ensures consistent access policy and auditing. Being a cloud-native organization, we highly recommend using a cloud-based identity provider, such as Microsoft 365, OneLogin, Google and others for centralized access control and single sign on.",
+      "guidance": "Your organization most likely relies on multiple business applications to support its operations. This may include end-user systems, collaboration tools, development and production environments, etc. Managing access to all of your business applications and systems centrally ensures consistent access policy and auditing. Being a cloud-native organization, we highly recommend using a cloud-based identity provider, such as Google Workspaces, OneLogin, Google and others for centralized access control and single sign on.",
       "considerations": [
         "Which IdP/SSO tool do you use?"
       ],
@@ -1207,10 +1207,10 @@
       "file": "procedures/cp-access-mfa.md",
       "name": "Multi-factor Authentication",
       "type": "technical",
-      "provider": "Microsoft 365",
+      "provider": "Google Workspaces",
       "function": "MFA",
       "summary": "Multi-factor authentication (MFA) is required for all users with access to business critical systems.",
-      "guidance": "Passwords are hard to remember but easy to compromise. Even with long and complex passwords, it is no longer sufficient by itself as the only control to prevent unauthorized access to critical systems and data. Microsoft 365 and other similar IdP vendors provide multi-factor authentication (MFA) capability as part of their offering, and it is very easy to enable especially if you already use it for single sign on.",
+      "guidance": "Passwords are hard to remember but easy to compromise. Even with long and complex passwords, it is no longer sufficient by itself as the only control to prevent unauthorized access to critical systems and data. Google Workspaces and other similar IdP vendors provide multi-factor authentication (MFA) capability as part of their offering, and it is very easy to enable especially if you already use it for single sign on.",
       "considerations": [
         "Which MFA provider do you use?"
       ],
@@ -1222,7 +1222,7 @@
       "file": "procedures/cp-access-rbac.md",
       "name": "Role Based Access Control (RBAC)",
       "type": "technical",
-      "provider": "Microsoft 365",
+      "provider": "Google Workspaces",
       "summary": "Access to systems and applications are provisioned based on a user's role / group.",
       "guidance": "Role based access control (RBAC) is an industry standard method for implementing access authorization to users. This is supported by most identity and access systems as 'Groups' and assigning users to the 'Groups' that match their job function/role.",
       "applicable": true,
@@ -1233,7 +1233,7 @@
       "file": "procedures/cp-access-aws.md",
       "name": "Temporary Access to AWS Accounts and Resources",
       "type": "technical",
-      "provider": "AWS IAM and Microsoft 365",
+      "provider": "AWS IAM and Google Workspaces",
       "function": "IAM",
       "summary": "Access to AWS cloud infrastructure is configured single sign on roles and temporary trusts. No persistent end-user access is configured.",
       "guidance": "We highly recommend leveraging the assume-role capability in AWS to gain temporary access to resources, combined with a cloud-native IdP for single-sign-on. This removes the need to provision IAM users directly within each of your AWS accounts.",
@@ -1263,10 +1263,10 @@
       "file": "procedures/cp-access-phi.md",
       "name": "Access to PHI/ePHI",
       "type": "operational",
-      "provider": "AWS IAM and Microsoft 365",
+      "provider": "AWS IAM and Google Workspaces",
       "function": "IAM",
       "summary": "Access to PHI/ePHI is restricted to only individuals with business need and protected by strong access control.",
-      "guidance": "Access to PHI/ePHI should be limited to those with a business need only, and protected by strong access control and auditing. We recommend using a combination of the native AWS IAM policies and single sign on (e.g. Microsoft 365) for access enforcement. Additionally, an extra layer of protection may be added to restrict risky or privileged actions.  This can be implemented using Explicit Deny actions in the AWS IAM policies.  A tool like Dome9 can help automate that process.",
+      "guidance": "Access to PHI/ePHI should be limited to those with a business need only, and protected by strong access control and auditing. We recommend using a combination of the native AWS IAM policies and single sign on (e.g. Google Workspaces) for access enforcement. Additionally, an extra layer of protection may be added to restrict risky or privileged actions.  This can be implemented using Explicit Deny actions in the AWS IAM policies.  A tool like Dome9 can help automate that process.",
       "considerations": [
         "Do you store any sensitive data such as PII, PHI, or credit card/financial data?"
       ],
@@ -1290,7 +1290,7 @@
       "file": "procedures/cp-access-change.md",
       "name": "Access Establishment, Modification and Termination",
       "type": "operational",
-      "provider": "Microsoft 365",
+      "provider": "Google Workspaces",
       "function": "SSO",
       "summary": "Changes to pre-established access (configured as part of onboarding) must be requested and approved by the employee's manager or security team prior to granting access. Non-standard access is revoked when no longer needed.",
       "guidance": "From time to time, you may need to add, change, or remove access to certain resources for an employee/contractor. It is required you have a process to capture the request, approval, and provisioning of such actions. If you already use an issue management tool like Jira, it is pretty straightforward to create a Service Desk project and manage it there.",
@@ -1308,7 +1308,7 @@
       "file": "procedures/cp-access-privileged.md",
       "name": "Privileged Access",
       "type": "technical",
-      "provider": "AWS IAM and Microsoft 365",
+      "provider": "AWS IAM and Google Workspaces",
       "function": "PAM",
       "summary": "Privileged access to production systems and/or data must be requested, reviewed, and approved each time. Privileged access is granted on a temporary basis, typically no more than 24 hours.",
       "guidance": "A privileged user is someone who has administrative access to critical systems or data. This type of access should be highly restricted and managed with a more controlled process than typical/non-privileged user access. There are security solutions dedicated to privileged access management. However, you might not need to purchase and implement a separate tool if you follow our recommended procedure using cloud-native SSO, AWS IAM, enable IAM policy guard rails and leverage explicit Deny rules in certain policies.",
@@ -1353,7 +1353,7 @@
       "type": "technical",
       "provider": "AWS Cognito",
       "summary": "The organization incorporates security best practices and standards for provisioning access including unique user identification, automatic logoff, and least-privileged access.",
-      "guidance": "You need to be able describe how your access control is implemented.  For example, using role-based access control, unique account/ID for each user, automatic log on/log off, etc. These should match the configuration of your identity provider or access control system such as Microsoft 365.",
+      "guidance": "You need to be able describe how your access control is implemented.  For example, using role-based access control, unique account/ID for each user, automatic log on/log off, etc. These should match the configuration of your identity provider or access control system such as Google Workspaces.",
       "considerations": [
         "What authentication tool do you use?",
         "Do you disable/lock default accounts on production systems?",
@@ -1397,7 +1397,7 @@
       "file": "procedures/cp-access-password.md",
       "name": "Password Management",
       "type": "technical",
-      "provider": "Microsoft 365",
+      "provider": "Google Workspaces",
       "function": "password-management",
       "summary": "Strong password management policy is in place.",
       "guidance": "You need to have policies/standards around password length, complexity, age, etc. Enough said.",
@@ -2336,7 +2336,7 @@
       "provider": "Jamf",
       "function": "MDM",
       "summary": "BYOD devices are not allowed to connect to production environments containing critical data.",
-      "guidance": "You may not support bring-your-own-device (BYOD) for your employees.  If you do, a mobile device management (MDM) solution should be in place to properly manage them.  If you already use Microsoft 365 as your IdP, they have a lightweight MDM solution you can enable from the same vendor. Alternatively, AirWatch or Jamf (Apple devices only) are also good solutions.",
+      "guidance": "You may not support bring-your-own-device (BYOD) for your employees.  If you do, a mobile device management (MDM) solution should be in place to properly manage them.  If you already use Google Workspaces as your IdP, they have a lightweight MDM solution you can enable from the same vendor. Alternatively, AirWatch or Jamf (Apple devices only) are also good solutions.",
       "considerations": [
         "What tooling is used for endpoint device management?",
         "Is BYOD allowed?"

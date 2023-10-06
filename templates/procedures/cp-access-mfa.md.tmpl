@@ -4,14 +4,66 @@ Multi-factor authentication (MFA) is a standard control used by {{companyShortNa
 provide strong access control to critical systems and applications, and should
 be enabled whenever possible.
 
-{{companyShortName}} implements {{provider}} for MFA.
+***Purpose***  
+The purpose of this policy is to provide guidelines for the use of multi-factor authentication (MFA)
+when accessing Above Property resources. These standards are designed to minimize the potential
+security exposure to Above Property from damages which may result from unauthorized use of {{companyShortName}}
+resources. MFA adds a layer of security that helps deter the use of compromised credentials.
+
+***Scope***  
+The policy applies to all members of the Above Property community, including all employees,
+contractors, board members, and affiliates who connect to Above Property associated network or
+technology resources. This policy applies to any system accessing Above Property or customer
+data where MFA can be utilized.
+
+***Definitions***  
+- Multi-factor authentication: Using two or more factors to validate the identity of a user.
+- Factor (of authentication): There are five are types of factors used in combination together resulting in multi-factor authentication. They are:
+- Something the user knows (username and password)
+- Something the user has (an item the user physically carries with them)
+- Something the user is (biometrics: fingerprints, face scan, etc.)
+- Somewhere the user is (geo location, on premises)
+- Something the user does (keystroke patterns)
+
+***Policy***  
+All individuals are required to engage in one additional step beyond the typical username/password
+login process to access Above Property and affiliated systems. Individuals are required to register
+and to use an approved MFA device (sometimes called a security key) wherever such devices are supported.
+If physical devices are not supported, individuals are required to make use of MFA software, such as
+Google Authenticator or Authy. Individuals must not use SMS (text message) based MFA unless the affiliated
+resource supports no other option. In the case that an affiliated resource only supports SMS based
+MFA, the individual must report this to the Information Security Officer.
+
+MFA is required for all externally-exposed enterprise or third-party applications, where supported.
+Enforcing MFA through a directory service or SSO provider is a satisfactory implementation of this safeguard.
+
+MFA is required for all administrative access accounts, where supported, on all enterprise assets,
+whether managed on-site or through a third-party provider.
+
+***Responsibilities***  
+Above Property will supply each covered individual with one MFA device. Individuals may supply their own backup devices if desired.
+It is the individual's responsibility to promptly report compromised credentials to the Information Security team.
+It is the individual's responsibility to promptly report a lost or stolen MFA device to the Information Security team.
+
+***Exemptions***  
+There may be situations in which an individual has a legitimate need to utilize technology resources
+outside the scope of this policy. The Information Security team must approve, in advance, exception
+requests based on balancing the benefit versus the risk to the company.
+
+***Enforcement***  
+This policy regulates the use of all MFA access to {{companyShortName}} network, software, and external
+resources. All users users must comply with this policy, as directed in the Policy Compliance Policy.
+Services will be disabled immediately if any suspicious activity is observed. Service will remain 
+disabled until the issue has been identified and resolved.  
+Any covered individual found to have intentionally violated or ignored this policy will be subject
+to loss of privileges or other actions, as specified in the Policy Compliance Policy.
+
 
 !!! important
 
     **Approved MFA methods include:**
 
-    - Push notification delivered through the {{provider}} mobile app (default and preferred for end-user access)
-    - Hardware MFA token (required for the root user of AWS accounts)
+    - Hardware MFA token (preferred; {{companyShortName}} provides Yubikey tokens for all staff, contractors, and board members)
     - A unique cryptographic certificate tied to a device
     - Time-based One-Time Password (TOTP) delivered through a mobile app, such as Google Authenticator
     - One-time passcode delivered through SMS text message (if it is the only supported option)
