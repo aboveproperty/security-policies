@@ -25,6 +25,7 @@ plugins:
   - search
   - with-pdf:
       cover_subtitle: Security Policies, Standards, and Procedures
+      output_path: pdf/Above_Property_Information_Security_Policy.pdf
 
 markdown_extensions:
   - smarty
