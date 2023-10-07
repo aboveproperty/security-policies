@@ -11,7 +11,7 @@ theme:
     primary: 'indigo'
     accent: ''
   favicon: 'assets/images/favicon.ico'
-  logo: 'assets/images/logo.svg'
+  logo: 'assets/images/aps_logo.png'
 
 # Enable custom.css
 extra_css:
