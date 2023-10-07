@@ -1,6 +1,6 @@
-site_name: 'Above Property Security PSP'
+site_name: 'Above Property Security Policies, Standards, and Procedures'
 site_description: 'Above Property Security Policies, Standards, and Procedures'
-site_url: 'https://aboveproperty.com/security'
+site_url: 'https://compliance.aboveproperty.com/'
 site_author: 'Above Property Systems, LLC.'
 
 theme:
@@ -8,7 +8,7 @@ theme:
   theme_dir: 'custom_theme'
   include_sidebar: false
   palette:
-    primary: ''
+    primary: 'indigo'
     accent: ''
   favicon: 'assets/images/favicon.ico'
   logo: 'assets/images/logo.svg'
@@ -16,6 +16,10 @@ theme:
 # Enable custom.css
 extra_css:
   - 'assets/css/custom.css'
+
+# Turn off "Made with Material for MkDocs"
+extra:
+  generator: false
 
 plugins:
   - search
@@ -64,4 +68,5 @@ nav:
 - 'Appendix E. Privacy Policy': 'privacy-policy.md'
 - 'Appendix F. Cookie Policy': 'cookie-policy.md'
 - 'Appendix G. GDPR Data Processing Agreement': 'gdpr-dpa.md'
+- 'Complete PDF of this site': 'pdf.md'
 

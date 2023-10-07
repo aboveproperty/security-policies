@@ -4,6 +4,11 @@ command -v gdate >/dev/null 2>&1 && DATE_CMD=gdate || DATE_CMD=date
 sed -i  -e "s,\"currentRevision\":.*,\"currentRevision\": \"Last Reviewed: $(git log -1 --format="%at" | xargs -I{} $DATE_CMD -d @{} +%F:%T-%Z)\"," abvprp-config.json
 psp build -t ./templates -c abvprp-config.json --noninteractive
 mkdocs build
+sed 's/class="md-sidebar\ /style="display: none" class="md-sidebar\ /g' site/cookie-policy/index.html > site/cookie-policy/index-standalone.html
+sed -i 's/class="md-search"/style="display: none" class="md-search"/g' site/cookie-policy/index-standalone.html
+sed -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/cookie-policy/index-standalone.html
+sed -i 's/class="md-header md-header--shadow"/style="display: none" class="md-header md-header--shadow"/g' site/cookie-policy/index-standalone.html
+sed -i 's/Appendix F. Cookie Policy//' site/cookie-policy/index-standalone.html
 sed 's/class="md-sidebar\ /style="display: none" class="md-sidebar\ /g' site/privacy-policy/index.html > site/privacy-policy/index-standalone.html
 sed -i 's/class="md-search"/style="display: none" class="md-search"/g' site/privacy-policy/index-standalone.html
 sed -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/privacy-policy/index-standalone.html

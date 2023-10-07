@@ -22,7 +22,7 @@
     "mkdocsLogoURL": "",
     "mkdocsThemeColorPrimary": "",
     "mkdocsThemeColorAccent": "",
-    "securityPolicyURL": "https://compliance.aboveproperty.com/",
+    "securityPolicyURL": "https://compliance.aboveproperty.com",
     "privacyPolicyURL": "https://aboveproperty.com/policies/privacy-policy",
     "cookiePolicyURL": "https://aboveproperty.com/policies/cookie-policy",
     "sourceControl": "GitHub",
@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-06:11:41:35-MST"
+    "currentRevision": "Last Reviewed: 2023-10-06:15:47:50-MST"
   },
   "standards": [
     {
@@ -545,7 +545,8 @@
         "ref-hipaa-baa",
         "ref-gdpr-dpa",
         "ref-hipaa-mapping",
-        "ref-nist-mapping"
+        "ref-nist-mapping",
+        "ref-pdf"
       ]
     },
     {
@@ -2704,6 +2705,13 @@
       "considerations": [
         "Is this Privacy Policy applicable?"
       ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-pdf",
+      "file": "ref/pdf.md",
+      "name": "Full PDF",
       "applicable": true,
       "adopted": true
     },

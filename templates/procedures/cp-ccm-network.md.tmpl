@@ -5,13 +5,14 @@ that:
 
 * Vendor provided default configurations are modified securely, including
 
-  - default encryption keys,
-  - default SNMP community strings, if applicable,
-  - default passwords/passphrases, and
-  - other security-related vendor defaults, if applicable.
+    - default encryption keys,
+    - default SNMP community strings, if applicable,
+    - default passwords/passphrases, and
+    - other security-related vendor defaults, if applicable.
 
-* Encryption keys and passwords are changed anytime anyone with knowledge of the
-  keys or passwords leaves the company or changes positions.
+* In addition to standard time-based rotation, encryption keys and passwords are
+changed any time anyone with knowledge of the keys or passwords leaves the
+company or assumes a position not authorized for such access.
 
 * Traffic filtering (e.g. firewall rules) and inspection (e.g. Network IDS/IPS
   or AWS VPC flow logs) are enabled.
