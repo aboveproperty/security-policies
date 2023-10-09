@@ -9,12 +9,12 @@ sed 's/class="md-sidebar\ /style="display: none" class="md-sidebar\ /g' site/coo
 sed -i 's/class="md-search"/style="display: none" class="md-search"/g' site/cookie-policy/index-standalone.html
 sed -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/cookie-policy/index-standalone.html
 sed -i 's/class="md-header md-header--shadow"/style="display: none" class="md-header md-header--shadow"/g' site/cookie-policy/index-standalone.html
-sed -i 's/Appendix F. Cookie Policy//' site/cookie-policy/index-standalone.html
+sed -i 's/Appendix .* Cookie Policy//' site/cookie-policy/index-standalone.html
 sed 's/class="md-sidebar\ /style="display: none" class="md-sidebar\ /g' site/privacy-policy/index.html > site/privacy-policy/index-standalone.html
 sed -i 's/class="md-search"/style="display: none" class="md-search"/g' site/privacy-policy/index-standalone.html
 sed -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/privacy-policy/index-standalone.html
 sed -i 's/class="md-header md-header--shadow"/style="display: none" class="md-header md-header--shadow"/g' site/privacy-policy/index-standalone.html
-sed -i 's/Appendix E. Privacy Policy//' site/privacy-policy/index-standalone.html
+sed -i 's/Appendix .* Privacy Policy//' site/privacy-policy/index-standalone.html
 mkdir -p site/docx
 cat mkdocs.yml | grep -v index.md | yq -r '.nav[] | to_entries | .[] | .value' > temp.md
 #cat temp.md

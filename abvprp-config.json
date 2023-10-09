@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-07:10:16:26-MST"
+    "currentRevision": "Last Reviewed: 2023-10-07:10:40:17-MST"
   },
   "standards": [
     {
@@ -2709,13 +2709,6 @@
       "adopted": true
     },
     {
-      "id": "ref-pdf",
-      "file": "ref/pdf.md",
-      "name": "Full PDF",
-      "applicable": true,
-      "adopted": true
-    },
-    {
       "id": "ref-cookie-policy",
       "file": "ref/cookie-policy.md",
       "name": "Cookie Policy",
@@ -2729,6 +2722,13 @@
       "considerations": [
         "Is your organization subject to GDPR compliance? If not, remove/replace."
       ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-pdf",
+      "file": "ref/pdf.md",
+      "name": "Full PDF",
       "applicable": true,
       "adopted": true
     }
