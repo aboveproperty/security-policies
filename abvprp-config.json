@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-07:10:40:17-MST"
+    "currentRevision": "Last Reviewed: 2023-10-09:07:20:59-MST"
   },
   "standards": [
     {
@@ -2696,7 +2696,7 @@
         "Is your organization subject to NIST compliance? If not, remove/replace."
       ],
       "applicable": false,
-      "adopted": false
+      "adopted": true
     },
     {
       "id": "ref-privacy-policy",
@@ -2722,6 +2722,13 @@
       "considerations": [
         "Is your organization subject to GDPR compliance? If not, remove/replace."
       ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-pci-certification",
+      "file": "ref/pci-certification.md",
+      "name": "PCI DSS AOC",
       "applicable": true,
       "adopted": true
     },
