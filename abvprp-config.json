@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-09:07:20:59-MST"
+    "currentRevision": "Last Reviewed: 2023-10-10:12:03:22-MST"
   },
   "standards": [
     {
@@ -546,6 +546,7 @@
         "ref-gdpr-dpa",
         "ref-hipaa-mapping",
         "ref-nist-mapping",
+        "ref-pci-dss-3-mapping",
         "ref-pdf"
       ]
     },
@@ -2694,6 +2695,16 @@
       "name": "NIST Controls Mapping",
       "considerations": [
         "Is your organization subject to NIST compliance? If not, remove/replace."
+      ],
+      "applicable": false,
+      "adopted": true
+    },
+    {
+      "id": "ref-pci-dss-3-mapping",
+      "file": "ref/pci-dss-3-mapping.md",
+      "name": "PCI Controls Mapping",
+      "considerations": [
+        "Is your organization subject to PCI compliance? If not, remove/replace."
       ],
       "applicable": false,
       "adopted": true

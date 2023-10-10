@@ -1,29 +1,24 @@
-## NIST Mappings to {{ companyShortName }} Policies and Controls
+## PCI DSS 3 Requirements Mapped to {{ companyShortName }} Policies and Controls
 
 `{{currentRevision}}`
 
-Below is a list of NIST SP 800-53 Controls Families and the mappings to
+Below is a list of PCI DSS 3.x Requirements and the mappings to
 {{companyShortName}} policies and controls in place.
 
-ID | NIST SP 800-53 Control Family          | {{ companyShortName }} Policies and Controls
--- | ---                                    | ---
-AC | Access Control                         | [Access][1]
-AT | Awareness and Training                 | [Roles and Responsibilities][2]
-AU | Audit and Accountability               | [Roles and Responsibilities][2]; [Compliance Audits][3]
-CA | Security Assessment and Authorization  | [Risk Management][4]; [Access][1]
-CM | Configuration Management               | [Configuration and Change Management][5]
-CP | Contingency Planning                   | [Business Continuity and Disaster Recovery][6]
-IA | Identification and Authentication      | [Access][1]
-IR | Incident Response                      | [Incident Response][7]; [Breach Notification][8]
-MA | Maintenance                            | [Configuration and Change Management][5]
-PE | Physical and Environmental Protection  | [Facility and Physical Security][9]
-PL | Planning                               | [Security Program Overview][10]; [Security Architecture & Operating Model][11]
-PS | Personnel Security                     | [HR & Personnel Security][12]
-RA | Risk Assessment                        | [Risk Management][4]
-SA | System and Services Acquisition        | [Third Party Security, Vendor Risk Management and Systems/Services Acquisition][13]
-SC | System and Communications Protection   | [Data Management][14]; [Data Protection][15]; and [Threat Detection & Prevention][16]
-SI | System and Information Integrity       | [Data Management][14]; [Data Protection][15]; [Product Security & Secure Software Development][17]; [Vulnerability Management][18];and [System Audits, Monitoring & Assessments][19]
-PM | Program Management                     | [Security Program Overview][10]; [Roles and Responsibilities][2]; and [Policy Management][20]
+ID | PCI DSS 3 Requirement                                                                       | {{ companyShortName }} Policies and Controls
+-- | ---                                                                                         | ---
+ 1 | Configure and use firewalls to protect cardholder data                                      | [HR and Personnel][12]; [Access][1]; [Data Protection][15]; [SDLC][17]; [Configuration & Change Management][5]; [Threat Detection and Prevention][16]; [Mobile Device Security and Media Management][21]; [Model][11]
+ 2 | Do not use the vendor’s default settings for system passwords and other security parameters | [Model][11]; [Roles & Responsibilities][2]; [Risk Management][4]; [Asset Inventory Management][22]; [Data Management][14]; [Data Protection][15]; [Configuration and Change Management][5]; [Mobile Device Security and Media Management][21]
+ 3 | Protect stored cardholder data                                                              | [Data Management][14]; [Data Protection][15]; [Mobile Device Security and Management][21]
+ 4 | Encrypt cardholder data when transmitting over open, public networks                        | [HR and Personnel Security][12]; [Data Protection][15]; [Secure Software Development and Product Security][17]
+ 5 | Protect all systems against malware and update anti-virus software regularly                | [System Audits, Monitoring and Assessments][19]; [HR and Personnel Security][12]; [Access][1]; [Configuration and Change Management][5]; [Threat Detection and Prevention][16]; [Mobile Device Security and Management][21]
+ 6 | Develop secure systems and applications                                                     | [Model][11]; [Roles, Responsibilities and Training][2]; [Risk Management and Risk Assessment Process][4]; [System Audits, Monitoring and Assessments][19]; [Secure Software Development and Product Security][17]; [Configuration and Change Management][5]; [Threat Detection and Prevention][16]; [Vulnerability Management][18]; [Mobile Device Security and Media Management][21]
+ 7 | Restrict access to cardholder data based on business requirements                           | [Access][1]; [Data Management][14]
+ 8 | Identify and authenticate access to system components                                       | [Roles, Responsibilities and Training][2]; [System Audits, Monitoring and Assessment][19]; [Access][1]
+ 9 | Restrict physical access to cardholder data                                                 | ["Facility Access and Physical Security"][9]; [Asset Inventory Management][22]; [Mobile Device Security and Media Management][21]
+10 | Track and monitor all access to network resources and cardholder data                       | [Roles, Responsibilities and Training][2]; [System Audits, Monitoring and Assessments][19];  [Configuration and Change Management][5]
+11 | Test security systems and processes regularly                                               | [Roles, Responsibilities and Training][2]; [System Audits, Monitoring and Assessments][19]; [Access][1]; [Secure Software Development and Product Security][17]; [Threat Detection and Prevention][16]; [Vulnerability Management][18]
+12 | Create a policy that addresses information security for all staff                           | [Roles, Responsibilities and Training][2]; [Policy Management][20]; [Risk Management and Risk Assessment Process][4]; [HR and Personnel Security][12]; [Secure Software Development and Product Security][17]; [Incident Response][7]; [Breach Investigation and Notification][8]; [Third Party Security and Vendor Risk Management][13]
 
 [1]: access.md
 [2]: rar.md
@@ -45,3 +40,5 @@ PM | Program Management                     | [Security Program Overview][10]; [
 [18]: vuln-mgmt.md
 [19]: system-audit.md
 [20]: policy-mgmt.md
+[21]: mdm.md
+[22]: asset-mgmt.md

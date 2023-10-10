@@ -70,6 +70,7 @@ nav:
 - 'Appendix F. Cookie Policy': 'cookie-policy.md'
 - 'Appendix G. GDPR Data Processing Agreement': 'gdpr-dpa.md'
 - 'Appendix H. NIST requirements mapping': 'nist-mapping.md'
-- 'Current PCI DSS AOC': 'pci-certification.md'
-- 'Complete PDF of this site': 'pdf.md'
+- 'Appendix I. PCI DSS Controls Mapping': 'pci-dss-3-mapping.md'
+- 'Appendix J. Current PCI DSS AOC': 'pci-certification.md'
+- 'Appendix K. Complete PDF of this site': 'pdf.md'
 
