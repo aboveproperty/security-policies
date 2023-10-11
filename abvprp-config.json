@@ -46,7 +46,7 @@
     "needStandardHIPAA": false,
     "needStandardHITRUST": false,
     "needStandardGDPR": true,
-    "needStandardNIST": false,
+    "needStandardNIST": true,
     "needStandardPCI": true,
     "needWhistleblower": false,
     "isServiceProvider": true,
@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-10:12:03:22-MST"
+    "currentRevision": "Last Reviewed: 2023-10-10:16:08:46-MST"
   },
   "standards": [
     {
@@ -335,6 +335,7 @@
         "cp-access-password",
         "cp-access-sso",
         "cp-access-mfa",
+        "cp-access-passkey",
         "cp-access-rbac",
         "cp-access-aws",
         "cp-access-vpn",
@@ -1208,6 +1209,21 @@
       "id": "cp-access-mfa",
       "file": "procedures/cp-access-mfa.md",
       "name": "Multi-factor Authentication",
+      "type": "technical",
+      "provider": "Google Workspaces",
+      "function": "MFA",
+      "summary": "Multi-factor authentication (MFA) is required for all users with access to business critical systems.",
+      "guidance": "Passwords are hard to remember but easy to compromise. Even with long and complex passwords, it is no longer sufficient by itself as the only control to prevent unauthorized access to critical systems and data. Google Workspaces and other similar IdP vendors provide multi-factor authentication (MFA) capability as part of their offering, and it is very easy to enable especially if you already use it for single sign on.",
+      "considerations": [
+        "Which MFA provider do you use?"
+      ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "cp-access-passkey",
+      "file": "procedures/cp-access-passkey.md",
+      "name": "Passkey Authentication",
       "type": "technical",
       "provider": "Google Workspaces",
       "function": "MFA",
