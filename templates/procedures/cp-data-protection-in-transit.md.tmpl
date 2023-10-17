@@ -25,21 +25,21 @@
 
 * Ciphers in use must meet or exceed the set defined as "AES-compatible" or "partially AES-compatible" according to the [IETF/IRTF Cipher Catalog](https://tools.ietf.org/html/draft-irtf-cfrg-cipher-catalog-01#section-3.1), or the set defined for use in the United States National Institute of Standards and Technology (NIST) publication [FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2010.htm), or any superseding documents according to the date of implementation. The use of the Advanced Encryption Standard (AES) is strongly recommended for symmetric encryption.
 
-* Algorithms in use must meet the standards defined for use in NIST publication [FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2010.htm) or any superseding document, according to date of implementation. The use of the RSA and Elliptic Curve Cryptography (ECC) algorithms is strongly recommended for asymmetric encryption.
+* Algorithms in use must meet the standards defined for use in NIST publication [FIPS 140-3](https://csrc.nist.gov/pubs/fips/140-3/final) or any superseding document, according to date of implementation. The use of the RSA and Elliptic Curve Cryptography (ECC) algorithms is strongly recommended for asymmetric encryption.
 
 #### Signature Algorithms
 
 * Algorithm: ECDSA
-  * Key Length (minumum): P-256
-  * Additional Comment: Cisco Legal recommends [RFC6090](https://tools.ietf.org/html/rfc6090) compliance to avoid patent infringement.
+    - Key Length (minumum): P-256
+    - Additional Comment: Cisco Legal recommends [RFC6090](https://tools.ietf.org/html/rfc6090) compliance to avoid patent infringement.
 
 * Algorithm: RSA
-  * Key Length (minumum): 2048
-  * Additional Comment: Must use a secure padding scheme. [PKCS#7 padding scheme](https://tools.ietf.org/html/rfc3852#section-6.3) is recommended. Message hashing required.
+    - Key Length (minumum): 2048
+    - Additional Comment: Must use a secure padding scheme. [PKCS#7 padding scheme](https://tools.ietf.org/html/rfc3852#section-6.3) is recommended. Message hashing required.
 
 * Algorithm: LDWM
-  * Key Length (minumum): SHA256
-  * Additional Comment: Refer to [LDWM Hash-based Signatures Draft](https://tools.ietf.org/html/draft-mcgrew-hash-sigs-00)
+    - Key Length (minumum): SHA256
+    - Additional Comment: Refer to [LDWM Hash-based Signatures Draft](https://tools.ietf.org/html/draft-mcgrew-hash-sigs-00)
 
 #### Hash Function Requirements
 In general, {{companyShortName}} adheres to the [NIST Policy](https://csrc.nist.gov/groups/ST/hash/policy.html) on Hash Functions.
@@ -53,7 +53,7 @@ In general, {{companyShortName}} adheres to the [NIST Policy](https://csrc.nist.
 
 #### Key Generation
 * Cryptographic keys must be generated and stored in a secure manner that prevents loss, theft, or compromise.
-* Key generation must be seeded from an industry standard random number generator (RNG). For examples, see [NIST Annex C: Approved Random Number Generators for FIPS PUB 140-2](https://csrc.nist.gov/publications/fips/fips140-2/fips1402annexc.pdf). 
+* Key generation must be seeded from an industry standard random number generator (RNG). For examples, see [NIST Annex C: Approved Random Number Generators for FIPS PUB 140-2](https://csrc.nist.gov//fips/fips140-2/fips1402annexc.pdf). 
 
 #### Encryption of Data in Transit
 
