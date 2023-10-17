@@ -21,19 +21,57 @@
 6. System logs of all transmissions of Production Data access are kept. These logs must
    be available for audit.
 
+#### Algorithm Requirements
+
+* Ciphers in use must meet or exceed the set defined as "AES-compatible" or "partially AES-compatible" according to the [IETF/IRTF Cipher Catalog](https://tools.ietf.org/html/draft-irtf-cfrg-cipher-catalog-01#section-3.1), or the set defined for use in the United States National Institute of Standards and Technology (NIST) publication [FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2010.htm), or any superseding documents according to the date of implementation. The use of the Advanced Encryption Standard (AES) is strongly recommended for symmetric encryption.
+
+* Algorithms in use must meet the standards defined for use in NIST publication [FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2010.htm) or any superseding document, according to date of implementation. The use of the RSA and Elliptic Curve Cryptography (ECC) algorithms is strongly recommended for asymmetric encryption.
+
+#### Signature Algorithms
+
+* Algorithm: ECDSA
+  * Key Length (minumum): P-256
+  * Additional Comment: Cisco Legal recommends [RFC6090](https://tools.ietf.org/html/rfc6090) compliance to avoid patent infringement.
+
+* Algorithm: RSA
+  * Key Length (minumum): 2048
+  * Additional Comment: Must use a secure padding scheme. [PKCS#7 padding scheme](https://tools.ietf.org/html/rfc3852#section-6.3) is recommended. Message hashing required.
+
+* Algorithm: LDWM
+  * Key Length (minumum): SHA256
+  * Additional Comment: Refer to [LDWM Hash-based Signatures Draft](https://tools.ietf.org/html/draft-mcgrew-hash-sigs-00)
+
+#### Hash Function Requirements
+In general, {{companyShortName}} adheres to the [NIST Policy](https://csrc.nist.gov/groups/ST/hash/policy.html) on Hash Functions.
+
+#### Key Agreement and Authentication
+* Key exchanges must use one of the following cryptographic protocols: Diffie-Hellman, IKE, or Elliptic curve Diffie-Hellman (ECDH).
+* End points must be authenticated prior to the exchange or derivation of session keys.
+* Public keys used to establish trust must be authenticated prior to use.  Examples of authentication include transmission via cryptographically signed message or manual verification of the public key hash.
+* All servers used for authentication (for example, RADIUS or TACACS) must have installed a valid certificate signed by a known trusted provider.
+* All servers and applications using SSL or TLS must have the certificates signed by a known, trusted provider.
+
+#### Key Generation
+* Cryptographic keys must be generated and stored in a secure manner that prevents loss, theft, or compromise.
+* Key generation must be seeded from an industry standard random number generator (RNG). For examples, see [NIST Annex C: Approved Random Number Generators for FIPS PUB 140-2](https://csrc.nist.gov/publications/fips/fips140-2/fips1402annexc.pdf). 
+
 #### Encryption of Data in Transit
 
-All internet and intranet connections are encrypted and authenticated using TLS
-1.2 (a strong protocol), ECDHE_RSA with P-256 (a strong key exchange), and
-AES_128_GCM (a strong cipher).
+All network connections, whether covered by regulations or not, whether transiting public networks or not, are encrypted and authenticated using at least TLS
+1.2 (a strong protocol), at least ECDHE_RSA with P-256 (a strong key exchange), and
+at least AES_128_GCM (a strong cipher). Connections to and within the Amazon Web Services cloud occur in the context of either the CloudFront content distribution network (CDN) or Application Load Balancers (ALBs). ALBs and CloudFront distributions must be configured with at least the TLSv1.2_2019 security policy as defined [here](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/secure-connections-supported-viewer-protocols-ciphers.html). {{companyShortName}} recognizes that a majority of its business partners in the hospitality industry are slow to adopt the significantly stronger protocols and ciphers specified in the TLSv1.2_2021 policy. It is {{companyShortName}} policy to strongly encourage all business partners to upgrade their technology stacks in support of stronger encryption.
 
 Reduced strength cryptography is available for customers with older
 equipment upon request and with approval from the Security Team. In these cases
-the transport would be used for communications NOT involving sensitive data.
+the transport **MUST NOT** be used for transmission of sensitive data.
+
+#### Special note on email
+
+It must be noted that regular email is **not** encrypted, and as such, **must not** be used to transmit sensitive data such as credit card details.
 
 #### Data protection via end-user messaging channels
 
-Restricted and sensitive data is not allowed to be sent over electronic end-user
+Restricted and sensitive data **must not** be sent over electronic end-user
 messaging channels such as email or chat, unless end-to-end encryption is
 enabled.
 
