@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-17:09:54:44-MST"
+    "currentRevision": "Last Reviewed: 2023-10-19:11:07:41-MST"
   },
   "standards": [
     {
@@ -2238,7 +2238,7 @@
       "file": "procedures/cp-threat-intel.md",
       "name": "Threat Intelligence Monitoring",
       "type": "operational",
-      "provider": "NH-ISAC",
+      "provider": "RH-ISAC",
       "function": "threat-intel",
       "summary": "The security team subscribes to news, feeds, forums and special interests groups to receive updates on threat intel and updates on applicable regulations and compliance.",
       "guidance": "As part of your ongoing security operations, you need to be informed of new regulations, compliance requirements, as well as valuable external threat intel that might help your spot indicators of compromise in your own environments. A good source of intel is the various Sector-based Information Sharing and Analysis Centers (ISACs). For example, if you are in the healthcare industry, it is recommended for you to become a member of the National Health Information Sharing and Analysis Center (NH-ISAC).",
@@ -2252,6 +2252,10 @@
         {
           "name": "National Council of ISACs",
           "link": "https://www.nationalisacs.org/"
+        },
+        {
+          "name": "RH-ISAC",
+          "link": "https://rhisac.org/"
         },
         {
           "name": "NH-ISAC",
