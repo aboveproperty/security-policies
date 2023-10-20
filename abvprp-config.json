@@ -23,8 +23,8 @@
     "mkdocsThemeColorPrimary": "",
     "mkdocsThemeColorAccent": "",
     "securityPolicyURL": "https://compliance.aboveproperty.com",
-    "privacyPolicyURL": "https://aboveproperty.com/policies/privacy-policy",
-    "cookiePolicyURL": "https://aboveproperty.com/policies/cookie-policy",
+    "privacyPolicyURL": "https://compliance.aboveproperty.com/privacy-policy/",
+    "cookiePolicyURL": "https://compliance.aboveproperty.com/cookie-policy",
     "sourceControl": "GitHub",
     "ticketingSystem": "Rally",
     "internalHelpdeskURL": "mailto:helpdesk@aboveproperty.com",
@@ -55,7 +55,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-19:11:07:41-MST"
+    "currentRevision": "Last Reviewed: 2023-10-19:11:12:36-MST"
   },
   "standards": [
     {
