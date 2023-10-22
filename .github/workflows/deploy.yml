@@ -33,7 +33,8 @@ jobs:
           python-version: '3.9'
           cache: 'pip'
       - name: set up mkdocs
-        run: pip install mkdocs-with-pdf mkdocs mkdocs-material mkdocs-material-extensions pymdown-extensions
+        #run: pip install mkdocs-with-pdf mkdocs mkdocs-material mkdocs-material-extensions pymdown-extensions
+        run: pip install -r requirements.txt
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
