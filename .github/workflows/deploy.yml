@@ -25,6 +25,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+          cache: 'npm'
       - name: install policy builder
         run: npm install -g @jupiterone/jupiter-policy-builder
       - name: set up python
@@ -33,14 +34,12 @@ jobs:
           python-version: '3.9'
           cache: 'pip'
       - name: set up mkdocs
-        #run: pip install mkdocs-with-pdf mkdocs mkdocs-material mkdocs-material-extensions pymdown-extensions
         run: pip install -r requirements.txt
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/${{ secrets.AWS_ROLE }}
           aws-region: ${{ env.AWS_REGION }}
-      # Upload a file to AWS s3
       - name:  Build and deploy the site
         run: |
           ./build.sh
