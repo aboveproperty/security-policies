@@ -41,6 +41,7 @@
     "hipaaTrainingURL": "",
     "statusPageURL": "",
     "securityAwarenessTrainingProvider": "GLS On Demand",
+    "onCallPagingProvider": "PagerDuty",
     "IdP": "",
     "CPA": "",
     "needStandardHIPAA": false,
@@ -55,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-10-20:10:06:26-MST"
+    "currentRevision": "Last Reviewed: 2023-10-21:06:22:03-MST"
   },
   "standards": [
     {
@@ -1954,7 +1955,7 @@
       "file": "procedures/cp-sdlc-monitor.md",
       "name": "Production System Monitoring, Incident Management, and Paging",
       "type": "operational",
-      "provider": "Slack",
+      "provider": "PagerDuty",
       "function": [
         "incident-management",
         "paging"
