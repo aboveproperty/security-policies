@@ -52,7 +52,7 @@ if [[ ! -z "$AWS_ACCOUNT_ID" ]] && [[ $(aws sts get-caller-identity --query 'Acc
   cd site || die "site directory unavailable, not updating web site"
   echo "Uploading site to S3:"
   sleep 1
-  aws s3 sync . s3://$COMPLIANCE_BUCKET  || die "S3 sync failed"
+  aws s3 sync . s3://$COMPLIANCE_BUCKET  --no-progress || die "S3 sync failed"
   echo ""
   echo "Creating CloudFront cache invalidation:"
   sleep 1
