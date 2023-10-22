@@ -23,12 +23,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: install policy builder
         run: npm install -g @jupiterone/jupiter-policy-builder
-      - name: set up mkdocs
+      - name: set up python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
           cache: 'pip'
+      - name: set up mkdocs
         run: pip install mkdocs-with-pdf mkdocs mkdocs-material mkdocs-material-extensions pymdown-extensions
       - name: Git clone the repository
         uses: actions/checkout@v4
