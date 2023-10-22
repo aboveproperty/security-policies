@@ -19,6 +19,8 @@ jobs:
   BuildAndDeploySite:
     runs-on: ubuntu-latest
     steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v4
       - name: set up node
         uses: actions/setup-node@v3
         with:
@@ -32,8 +34,6 @@ jobs:
           cache: 'pip'
       - name: set up mkdocs
         run: pip install mkdocs-with-pdf mkdocs mkdocs-material mkdocs-material-extensions pymdown-extensions
-      - name: Git clone the repository
-        uses: actions/checkout@v4
       - name: configure aws credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
