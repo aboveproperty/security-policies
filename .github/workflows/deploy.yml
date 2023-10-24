@@ -27,7 +27,7 @@ jobs:
           node-version: 18
           cache: 'npm'
       - name: install policy builder
-        run: npm install -g @jupiterone/jupiter-policy-builder
+        run: npm install -g @jupiterone/security-policy-builder
       - name: set up python
         uses: actions/setup-python@v4
         with:
