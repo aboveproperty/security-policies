@@ -17,5 +17,8 @@
     "csvtojson": "^2.0.10",
     "lodash.capitalize": "^4.2.1",
     "lodash.startcase": "^4.4.0"
+  },
+  "dependencies": {
+    "@jupiterone/security-policy-builder": "^4.2.0"
   }
 }
