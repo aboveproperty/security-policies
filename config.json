@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-11-04:14:25:51-MST"
+    "currentRevision": "Last Reviewed: 2023-11-15:08:16:49-MST"
   },
   "standards": [
     {
@@ -530,26 +530,6 @@
         "cp-vendor-contracts",
         "cp-vendor-monitor",
         "cp-vendor-ssa"
-      ]
-    },
-    {
-      "id": "ref",
-      "file": "policies/ref.md",
-      "name": "Addendum and References",
-      "adopted": true,
-      "procedures": [
-        "ref-definitions",
-        "ref-employee-handbook",
-        "ref-approved-software",
-        "ref-approved-vendors",
-        "ref-cookie-policy",
-        "ref-privacy-policy",
-        "ref-hipaa-baa",
-        "ref-gdpr-dpa",
-        "ref-hipaa-mapping",
-        "ref-nist-mapping",
-        "ref-pci-dss-3-mapping",
-        "ref-pdf"
       ]
     },
     {
