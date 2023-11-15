@@ -38,9 +38,9 @@ rm -fr ./site/* ./docs/* ./partials/*
 
 command -v gdate >/dev/null 2>&1 && DATE_CMD=gdate || DATE_CMD=date
 
-sed -i  -e "s,\"currentRevision\":.*,\"currentRevision\": \"Last Reviewed: $(git log -1 --format="%at" | xargs -I{} $DATE_CMD -d @{} +%F:%T-%Z)\"," abvprp-config.json
+sed -i  -e "s,\"currentRevision\":.*,\"currentRevision\": \"Last Reviewed: $(git log -1 --format="%at" | xargs -I{} $DATE_CMD -d @{} +%F:%T-%Z)\"," config.json
 
-psp build -t ./templates -c abvprp-config.json --noninteractive || die "Failed to build markdown files from templates"
+psp build -t ./templates -c config.json --noninteractive || die "Failed to build markdown files from templates"
 
 # This is a kludge; I can't get psp to ref a non-default image
 cp assets/images/aps_logo.png docs/assets/images || die "APS logo did not copy"

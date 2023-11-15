@@ -9,7 +9,6 @@ They can be used as stand-alone documents. But the structure is designed to be
 best suited for use with the [`jupiter-policy-builder` CLI][builder] and the
 **policies** app on the **[JupiterOne][j1]** platform.
 
-These are used internally at JupiterOne / LifeOmic Security.
 
 [j1]: https://jupiterone.com/features/policy-builder/
 [builder]: https://github.com/JupiterOne/jupiter-policy-builder
@@ -21,7 +20,7 @@ You will be prompted for a few inputs, such as company name, to be included in
 your policy text.
 
 ```bash
-npm install -g @jupiterone/jupiter-policy-builder
+npm install -g @jupiterone/security-policy-builder
 
 psp build -t ./templates
 ```
@@ -30,9 +29,9 @@ You will be prompted to save the config to a file, which you can reference the
 next time you'd like to rebuild the policies and procedures:
 
 ```bash
-psp build -t ./templates -c genius-central-config.json
+psp build -t ./templates -c config.json
 # Pre-requisite `pip install mkdocs mkdocs-material mkdocs-with-pdf yq`
-#    https://weasyprint.readthedocs.io/en/latest/install.html#windows
+
 mkdocs build
 # Convert to word document
 mkdir -p site/docx
@@ -42,9 +41,7 @@ pandoc -s -o site/docx/policies.docx docs/index.md docs/program.md docs/corp-gov
 ./build.sh
 ```
 
-The result files are put in `./docs` (Markdown) `./site` (HTML) `/site/pdf/document.pdf` (PDF) `site/docx/policies.docx` (DOCX).
-
-Upload using the `FTP-UploadDirectory` PowerShell script. Password is in BitWarden (BlueHost -> ftp_polices)
+The resulting files are put in `./docs` (Markdown) `./site` (HTML) `/site/pdf/document.pdf` (PDF) `site/docx/policies.docx` (DOCX).
 
 **IMPORTANT:** To edit the policies and procedures, use the template files in
 `./templates` and re-run the `psp build` command. Do _not_ edit the `./docs` and
@@ -204,11 +201,3 @@ that you must have documented controls and procedures to implement and enforce a
 high level written policy. Having a written policy by itself without 
 implementation or enforcement does not address the risk of any security
 or compliance requirement.
-
-Internally at JupiterOne, we leverage CIS Controls and PCI DSS. JupiterOne's
-parent company, LifeOmic, builds a suite of healthcare related software products
-and is therefore under HIPAA regulation and has adopted HITRUST CSF.
-
-The JSON documents for those four frameworks are included strictly because of
-our internal usage and shown as examples. Using those requires that you have
-obtained necessary end-user license for the framework for your own organization.
