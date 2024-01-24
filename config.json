@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-11-15:08:16:49-MST"
+    "currentRevision": "Last Reviewed: 2023-11-15:11:39:54-MST"
   },
   "standards": [
     {
@@ -207,6 +207,12 @@
     }
   ],
   "policies": [
+    {
+      "id": "pci-charter",
+      "file": "policies/pci-charter.md",
+      "name": "PCI DSS Charter",
+      "adopted": true
+    },
     {
       "id": "program",
       "file": "policies/program.md",
@@ -543,6 +549,20 @@
     }
   ],
   "procedures": [
+    {
+      "id": "cp-pci-charter",
+      "file": "procedures/cp-pci-charter.md",
+      "name": "PCI DSS Charter",
+      "type": "informational",
+      "provider": "Above Property",
+      "summary": "The organization has an established PCI DSS compliance program with appropriate controls that are aligned to the organization's objectives and risk posture.",
+      "guidance": "This describes the organization's PCI DSS Program Charter, high level controls, and program management processes.",
+      "considerations": [
+        "Which standards, domains, frameworks, etc. does your security program address?"
+      ],
+      "applicable": true,
+      "adopted": true
+    },
     {
       "id": "cp-ism-scope",
       "file": "procedures/cp-ism-scope.md",
