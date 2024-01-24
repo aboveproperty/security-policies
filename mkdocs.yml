@@ -37,7 +37,6 @@ markdown_extensions:
       guess_lang: false
 nav:
 - 'Home': 'index.md'
-- 'PCI DSS Program Charter': 'pci-charter.md'
 - 'Security Program Overview': 'program.md'
 - 'Corporate Governance': 'corp-gov.md'
 - 'Policy Management': 'policy-mgmt.md'
@@ -72,6 +71,7 @@ nav:
 - 'Appendix G. GDPR Data Processing Agreement': 'gdpr-dpa.md'
 - 'Appendix H. NIST requirements mapping': 'nist-mapping.md'
 - 'Appendix I. PCI DSS Controls Mapping': 'pci-dss-3-mapping.md'
+- 'Appendix J. PCI DSS Program Charter': 'pci-charter.md'
 - 'Appendix J. Current PCI DSS AOC': 'pci-certification.md'
 - 'Appendix K. Complete PDF of this site': 'pdf.md'
 

@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2023-11-15:11:39:54-MST"
+    "currentRevision": "Last Reviewed: 2024-01-24:13:58:22-MST"
   },
   "standards": [
     {
@@ -207,12 +207,6 @@
     }
   ],
   "policies": [
-    {
-      "id": "pci-charter",
-      "file": "policies/pci-charter.md",
-      "name": "PCI DSS Charter",
-      "adopted": true
-    },
     {
       "id": "program",
       "file": "policies/program.md",
@@ -2728,6 +2722,12 @@
         "Is your organization subject to PCI compliance? If not, remove/replace."
       ],
       "applicable": false,
+      "adopted": true
+    },
+    {
+      "id": "pci-charter",
+      "file": "ref/pci-charter.md",
+      "name": "PCI DSS Charter",
       "adopted": true
     },
     {
