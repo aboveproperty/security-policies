@@ -10,10 +10,10 @@ This is achieved with the following processes:
 * An organization master account (`{{companyShortName}}-master`) in AWS is configured with
   IAM roles such as Developer and Security.
 * SAML SSO and trust relationship is established between the roles in
-  `{{companyShortName}}-master` and an "AWS application" provisioned in Microsoft 365.
+  `{{companyShortName}}-master` and an "AWS application" provisioned in AWS Identity Center.
 * Users are assigned their corresponding roles through application and role
-  assignment in Microsoft 365.
-* Via SSO, Users authenticate through Microsoft 365 by using their Microsoft 365 username,
+  assignment in Google Workspaces.
+* Via SSO, Users authenticate through Google Workspaces by using their {{companyShortName}} Google username,
   password, and MFA.
 * Upon successful authentication and MFA validation, users are logged into
   `{{companyShortName}}-master` using AWS Assume Role capability.
@@ -22,7 +22,7 @@ This is achieved with the following processes:
   resources in the master account.
 * The user is required to Assume a Role in a sub-account, connected via
   cross-account trust policy defined at account bootstrap or through an approved
-  change management process.  For example, a Developer can assume the
+  change management process.  For example, a Developer may be able assume the
   `Administrator` role in `{{companyShortName}}-dev`, which is the sandboxed development
   environment in a separate AWS account.
 * Assume Role access to a production AWS account is highly restricted.
@@ -37,18 +37,15 @@ This is achieved with the following processes:
 
 **AWS CLI/SDK Access**
 
-* [aws-azure-login](https://github.com/sportradar/aws-azure-login)
+* [granted/assume](https://github.com/common-fate/granted)
   is used to obtain temporary credentials (access keys) for developers to
   connect to AWS using the CLI or SDK.
-* By running the aws-azure-login, developers are prompted to authenticate to
-  Microsoft 365 using their Microsoft 365 credentials and MFA token/app.
-* Upon successful authentication and MFA validation, a temporary access key and
-  session token is inserted into the local configuration file (e.g.
-  `~/.aws/credentials` and `~/.aws/config`).
-* This temporary credentials expires after one hour and a new temporary
+* Using granted/assume, users are prompted to authenticate to
+  Google Workspaces using their {{companyShortName}} credentials and MFA token/app.
+* Upon successful authentication and MFA validation, a temporary
+  session token is inserted into the user's local environment.
+* This temporary credential expires after one hour and a new temporary
   credential must be obtained for access.
-* Through this method, developers are granted the same permission as they would
-  by assuming the `Developer` role through AWS console.
 * Additional details are documented on the [Development Wiki]({{&devWikiURL}}).
 
 **IAM Safety**
@@ -61,7 +58,6 @@ This is achieved with the following processes:
   effectively restricts access and prohibits execution of the risky actions as
   defined in the policy, even if the user/role may have administrative
   privilege.
-* Original access can be temporarily restored through Azure Active Directory.
 * Privilege Roles, such as Security role in master account and Administrator
   role in production account, are protected by IAM Safety.
 
