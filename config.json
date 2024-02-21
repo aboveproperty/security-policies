@@ -1,6 +1,6 @@
 {
   "organization": {
-    "companyFullName": "Above Property Systems, LLC.",
+    "companyFullName": "Above Property, LLC.",
     "companyShortName": "APS",
     "companyEmailDomain": "aboveproperty.com",
     "companyWebsiteURL": "https://www.aboveproperty.com",
@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-01-31:12:56:39-MST"
+    "currentRevision": "Last Reviewed: 2024-02-21:11:18:26-MST"
   },
   "standards": [
     {
