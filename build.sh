@@ -54,7 +54,7 @@ if [[ ! -z "$AWS_ACCOUNT_ID" ]] && [[ $(aws sts get-caller-identity --query 'Acc
    echo "Uploading site to S3:"
    sleep 1
    aws s3 sync . s3://$COMPLIANCE_BUCKET --no-progress || die "S3 sync failed"
-   aws s3 sync assets s3://$COMPLIANCE_BUCKET/privacy-policy --no-progress || die "assets sync failed"
+   aws s3 sync assets s3://$COMPLIANCE_BUCKET/privacy-policy/assets --no-progress || die "assets sync failed"
    echo ""
    echo "Creating CloudFront cache invalidation:"
    sleep 1
