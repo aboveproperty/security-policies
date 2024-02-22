@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-02-21:13:50:45-MST"
+    "currentRevision": "Last Reviewed: 2024-02-22:13:21:45-MST"
   },
   "standards": [
     {
@@ -2651,13 +2651,6 @@
   ],
   "references": [
     {
-      "id": "ref-responsible-disclosure",
-      "file": "ref/responsible-disclosure.md",
-      "name": "Responsible Disclosure Guidelines",
-      "applicable": true,
-      "adopted": true
-    },
-    {
       "id": "ref-employee-handbook",
       "file": "ref/employee-handbook.md",
       "name": "Employee Handbook",
@@ -2688,6 +2681,33 @@
       "id": "ref-definitions",
       "file": "ref/definitions.md",
       "name": "Key Definitions",
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-privacy-policy",
+      "file": "ref/privacy-policy.md",
+      "name": "Privacy Policy",
+      "considerations": [
+        "Is this Privacy Policy applicable?"
+      ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-cookie-policy",
+      "file": "ref/cookie-policy.md",
+      "name": "Cookie Policy",
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-gdpr-dpa",
+      "file": "ref/gdpr-dpa.md",
+      "name": "GDPR Data Processing Agreement",
+      "considerations": [
+        "Is your organization subject to GDPR compliance? If not, remove/replace."
+      ],
       "applicable": true,
       "adopted": true
     },
@@ -2734,47 +2754,28 @@
     {
       "id": "pci-charter",
       "file": "ref/pci-charter.md",
-      "name": "PCI DSS Charter",
+      "name": "PCI DSS Program Charter",
       "adopted": true
     },
-    {
-      "id": "ref-privacy-policy",
-      "file": "ref/privacy-policy.md",
-      "name": "Privacy Policy",
-      "considerations": [
-        "Is this Privacy Policy applicable?"
-      ],
-      "applicable": true,
-      "adopted": true
-    },
-    {
-      "id": "ref-cookie-policy",
-      "file": "ref/cookie-policy.md",
-      "name": "Cookie Policy",
-      "applicable": true,
-      "adopted": true
-    },
-    {
-      "id": "ref-gdpr-dpa",
-      "file": "ref/gdpr-dpa.md",
-      "name": "GDPR Data Processing Agreement",
-      "considerations": [
-        "Is your organization subject to GDPR compliance? If not, remove/replace."
-      ],
-      "applicable": true,
-      "adopted": true
-    },
+
     {
       "id": "ref-pci-certification",
       "file": "ref/pci-certification.md",
-      "name": "PCI DSS AOC",
+      "name": "Current PCI DSS AOC",
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-responsible-disclosure",
+      "file": "ref/responsible-disclosure.md",
+      "name": "Responsible Disclosure Guidelines",
       "applicable": true,
       "adopted": true
     },
     {
       "id": "ref-pdf",
       "file": "ref/pdf.md",
-      "name": "Full PDF",
+      "name": "Complete PDF of this site",
       "applicable": true,
       "adopted": true
     }
