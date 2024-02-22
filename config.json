@@ -1,6 +1,6 @@
 {
   "organization": {
-    "companyFullName": "Above Property, LLC.",
+    "companyFullName": "Above Property LLC.",
     "companyShortName": "APS",
     "companyEmailDomain": "aboveproperty.com",
     "companyWebsiteURL": "https://www.aboveproperty.com",
@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-02-21:13:34:59-MST"
+    "currentRevision": "Last Reviewed: 2024-02-21:13:50:45-MST"
   },
   "standards": [
     {
@@ -2650,6 +2650,13 @@
     }
   ],
   "references": [
+    {
+      "id": "ref-responsible-disclosure",
+      "file": "ref/responsible-disclosure.md",
+      "name": "Responsible Disclosure Guidelines",
+      "applicable": true,
+      "adopted": true
+    },
     {
       "id": "ref-employee-handbook",
       "file": "ref/employee-handbook.md",

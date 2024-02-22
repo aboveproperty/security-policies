@@ -1,0 +1,84 @@
+#Responsible Disclosure Guidelines
+
+We at {{companyFullName}} ({{companyShortName}}) are committed to the security of your data. If you believe that you have discovered a security vulnerability in our software or web sites, we ask that you follow basic industry standard responsible disclosure practices. We may compensate you if you responsibly report a vulnerability that we were unaware of and that requires us to address via code changes or configuration updates.
+
+*Reports should include at minimum a screenshot or a video of a proof-of-concept exploit. Vulnerability reports that do not include clear evidence of a proof-of-concept exploit or a description of an exploit clear enough for us to reproduce will be ignored.*
+
+Please submit vulnerability reports to [security@{{companyEmailDomain}}](mailto:security@{{companyEmailDomain}}). Email us for a PGP key if you would like to encrypt your message.
+
+##Rules of Engagement
+
+* No Denial of Service testing
+* No Physical or Social Engineering
+* No testing of Third-party Services
+* No uploading of any vulnerability or client-related content to third-party utilities (e.g. Github, DropBox, YouTube)
+* All attack payload data must use professional language
+* If able to gain access to a system, accounts, users, or user data, stop at point of recognition and report. Do not dive deeper to determine how much more is accessible.
+* Low Impact Vulnerabilities - Out of Scope
+* We will respond to you within two business days, and ask that your disclosure remain confidential during reasonable periods required to address it. We will set reasonable expectations for our communication responses, and ask that you be responsive as well.
+
+## Scope
+**The following vulnerabilities are considered low impact and will be marked as Out of Scope if submitted:**
+
+* Descriptive error messages (e.g. Stack Traces, application or server errors).
+* HTTP 404 codes/pages or other HTTP non-200 codes/pages.
+* Banner disclosure on common/public services.
+* Disclosure of known public files or directories, (e.g. robots.txt).
+* Clickjacking and issues only exploitable through clickjacking.
+* CSRF on forms that are available to anonymous users (e.g. the contact form).
+* Logout Cross-Site Request Forgery (logout CSRF).
+* Presence of application or web browser ‘autocomplete’ or ‘save password’ functionality.
+* Lack of Secure and HTTPOnly cookie flags.
+* Lack of Security Speedbump when leaving the site.
+* Weak Captcha / Captcha Bypass
+* Username enumeration via Login Page error message
+* Username enumeration via Forgot Password error message
+* Login or Forgot Password page brute force and account lockout not enforced.
+* OPTIONS / TRACE HTTP method enabled
+* SSL Attacks such as BEAST, BREACH, Renegotiation attack
+* SSL Forward secrecy not enabled
+* SSL Insecure cipher suites
+* Lack of SSL or Mixed content
+* The Anti-MIME-Sniffing header X-Content-Type-Options
+* Missing HTTP security headers, specifically [https://blog.veracode.com/2014/03/guidelines-for-setting-security-headers/](https://blog.veracode.com/2014/03/guidelines-for-setting-security-headers/)
+* Google Maps API Keys
+* Account/e-mail enumeration using brute-force attacks
+* Valid user account/email enumeration not requiring brute-force will be considered
+* Any low impact issues related to session management (i.e. concurrent sessions, session expiration, password reset/change log out, etc.)
+* Bypassing content restrictions in uploading a file without proving the file was received
+* Clickjacking/UI redressing
+* Client-side application/browser autocomplete or saved password/credentials
+* Descriptive or verbose error pages without proof of exploitability or obtaining sensitive information
+* Directory structure enumeration (unless the fact reveals exceptionally useful information)
+* Incomplete or missing SPF/DMARC/DKIM records
+* Issues related to password/credential strength, length, lockouts, or lack of brute-force/rate limiting protections
+* Account compromises (especially admin) as a result of these issues will likely be considered VALID
+* Leaking Session Cookies, User Credentials, or other sensitive data will be reviewed on a case by case basis
+* If leaking of sensitive data requires MiTM positioning to exploit, it will be considered out of scope
+* Login/Logout/Unauthenticated/Low-impact CSRF
+* CSRF Vulnerabilities may be acceptable if they are of higher impact. Examples of low impact CSRF include: Add/Delete from Cart, Add/remove wishlist/favorites, Nonsevere preference options, etc.
+* Low impact Information disclosures (including Software version disclosure)
+* Missing Cookie flags
+* Missing/Enabled HTTP Headers/Methods which do not lead directly to a security vulnerability
+* Reflected file download attacks (RFD)
+* Self-exploitation (i.e. password reset links or cookie reuse)
+* SSL/TLS best practices that do not contain a fully functional proof of concept
+* URL/Open Redirection
+* Use of a known-vulnerable library which leads to a low-impact vulnerability (i.e. jQuery outdated version leads to low impact XSS)
+* Valid bugs or best practice issues that are not directly related to the security posture of the client
+* Vulnerabilities affecting users of outdated browsers, plugins or platforms
+* Vulnerabilities that allow for the injection of arbitrary text without allowing for hyperlinks, HTML, or JavaScript code to be injected
+* Vulnerabilities that require the user/victim to perform extremely unlikely actions (i.e. Self-XSS)
+Self-XSS for a Persistent/Stored XSS will be considered.
+* Any type of XSS that requires a victim to press an unlikely key combination is NOT in scope (i.e. alt+shift+x for payload execution)
+
+**Additional specific vulnerability types considered out of scope due to low impact:**
+
+* IIS Tilde File and Directory Disclosure
+* SSH Username Enumeration
+* Wordpress Username Enumeration
+* SSL Weak Ciphers/ POODLE / Heartbleed
+* CSV Injection
+* PHP Info
+* Server-Status if it does not reveal sensitive information
+* Snoop Info Disclosures
