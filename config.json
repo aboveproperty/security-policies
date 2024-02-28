@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-02-22:13:56:19-MST"
+    "currentRevision": "Last Reviewed: 2024-02-23:07:59:20-MST"
   },
   "standards": [
     {
@@ -540,6 +540,13 @@
       "procedures": [
         "cp-privacy-notices"
       ]
+    },
+    {
+      "id": "genAI",
+      "file": "policies/artificial-intelligence.md",
+      "name": "Use of Generative AI",
+      "adopted": true,
+      "procedures": []
     }
   ],
   "procedures": [
