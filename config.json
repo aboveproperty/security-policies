@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-02-23:07:59:20-MST"
+    "currentRevision": "Last Reviewed: 2024-03-04:08:40:47-MST"
   },
   "standards": [
     {
@@ -2694,6 +2694,16 @@
     {
       "id": "ref-privacy-policy",
       "file": "ref/privacy-policy.md",
+      "name": "Privacy Policy",
+      "considerations": [
+        "Is this Privacy Policy applicable?"
+      ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-proposed-privacy-policy",
+      "file": "ref/proposed-privacy-policy.md",
       "name": "Privacy Policy",
       "considerations": [
         "Is this Privacy Policy applicable?"
