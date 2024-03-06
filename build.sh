@@ -32,11 +32,6 @@ fixup_standalone_policies() {
    $SED -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/privacy-policy/index-standalone.html
    $SED -i 's/class="md-header md-header--shadow"/style="display: none" class="md-header md-header--shadow"/g' site/privacy-policy/index-standalone.html
    $SED -i 's/Appendix .* Privacy Policy//' site/privacy-policy/index-standalone.html
-   $SED 's/class="md-sidebar\ /style="display: none" class="md-sidebar\ /g' site/proposed-privacy-policy/index.html >site/proposed-privacy-policy/index-standalone.html
-   $SED -i 's/class="md-search"/style="display: none" class="md-search"/g' site/proposed-privacy-policy/index-standalone.html
-   $SED -i 's/class="md-footer"/style="display: none" class="md-footer"/g' site/proposed-privacy-policy/index-standalone.html
-   $SED -i 's/class="md-header md-header--shadow"/style="display: none" class="md-header md-header--shadow"/g' site/proposed-privacy-policy/index-standalone.html
-   $SED -i 's/Appendix .* Privacy Policy//' site/proposed-privacy-policy/index-standalone.html
 }
 
 rm -fr ./site/* ./docs/* ./partials/*
