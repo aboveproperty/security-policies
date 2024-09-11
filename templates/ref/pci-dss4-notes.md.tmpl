@@ -1,0 +1,23 @@
+##
+# PCI DSS4 Notes
+
+`{{currentRevision}}`
+
+## Background
+
+{{companyShortName}} will adhere to all requirements in the PCI DSS 4 standard, which is mandatory as of 2025. Certain requirements of DSS 4 do not apply in our implementation, and the standard requires documentation for such cases. This document serves as the repository for all such documentation.
+
+## Requirement 11.3.1.2
+
+11.3.1.2 requires that Internal vulnerability scans are performed
+via authenticated scanning as follows:
+
+* Systems that are unable to accept credentials
+for authenticated scanning are documented.
+* Sufficient privileges are used for those systems
+that accept credentials for scanning.
+* If accounts used for authenticated scanning can
+be used for interactive login, they are managed
+in accordance with Requirement 8.2.2.
+
+{{companyShortName}} in-scope systems (the "payment services gateway") do include methods for user authentication. However, the payment services gateway does not itself require authentication of any kind. The payment services gateway acts solely as a pass-through proxy for transactions that contain PAN data; the only business function they are capable of is extraction of PAN data, forwarding it to 3rd parties for tokenization, reassembling the original transaction using the tokenized data, and then passing it on downstream to out of scope systems for business processing. Downstream, out of scope systems may require that authentication data be present, but the in scope systems do not in any way require or use authentication to perform the in scope tasks.

@@ -56,7 +56,7 @@
     "isHIPAAGovernmentEntity": false,
     "isHIPAAPlanSponsor": false,
     "isHIPAAHealthcareClearinghouse": false,
-    "currentRevision": "Last Reviewed: 2024-03-05:12:26:20-MST"
+    "currentRevision": "Last Reviewed: 2024-09-11:08:37:16-MST"
   },
   "standards": [
     {
@@ -560,6 +560,20 @@
       "guidance": "This describes the organization's PCI DSS Program Charter, high level controls, and program management processes.",
       "considerations": [
         "Which standards, domains, frameworks, etc. does your security program address?"
+      ],
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "cp-pci-dss4-notes",
+      "file": "procedures/cp-pci-dss4-notes.md",
+      "name": "PCI DSS4 Notes",
+      "type": "informational",
+      "provider": "Above Property",
+      "summary": "The organization has documented all exception items from the DSS 4 standard",
+      "guidance": "This describes the organizations required exceptions documentation.",
+      "considerations": [
+        ""
       ],
       "applicable": true,
       "adopted": true
@@ -2776,6 +2790,13 @@
       "id": "ref-responsible-disclosure",
       "file": "ref/responsible-disclosure.md",
       "name": "Responsible Disclosure Guidelines",
+      "applicable": true,
+      "adopted": true
+    },
+    {
+      "id": "ref-pci-dss4-notes",
+      "file": "ref/pci-dss4-notes.md",
+      "name": "PCI DSS 4 Notes",
       "applicable": true,
       "adopted": true
     },

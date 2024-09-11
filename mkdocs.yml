@@ -74,6 +74,7 @@ nav:
 - 'Appendix I. PCI DSS Controls Mapping': 'pci-dss-3-mapping.md'
 - 'Appendix J. PCI DSS Program Charter': 'pci-charter.md'
 - 'Appendix K. Current PCI DSS AOC': 'pci-certification.md'
-- 'Appendix L. Responsible Disclosure Guidelines': 'responsible-disclosure.md'
-- 'Appendix M. Complete PDF of this site': 'pdf.md'
+- 'Appendix L. PCI DSS 4 system documentation': 'pci-dss4-notes.md'
+- 'Appendix M. Responsible Disclosure Guidelines': 'responsible-disclosure.md'
+- 'Appendix N. Complete PDF of this site': 'pdf.md'
 
