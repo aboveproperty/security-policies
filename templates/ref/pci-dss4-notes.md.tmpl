@@ -22,6 +22,21 @@ in accordance with Requirement 8.2.2.
 
 {{companyShortName}} in-scope systems (the "payment services gateway") do include methods for user authentication. However, the payment services gateway does not itself require authentication of any kind. The payment services gateway acts solely as a pass-through proxy for transactions that contain PAN data; the only business function they are capable of is extraction of PAN data, forwarding it to 3rd parties for tokenization, reassembling the original transaction using the tokenized data, and then passing it on downstream to out of scope systems for business processing. Downstream, out of scope systems may require that authentication data be present, but the in scope systems do not in any way require or use authentication to perform the in scope tasks.
 
+## Requirements 12.8.4 and 12.8.5
+### Our capacity as a TPSP
+
+{{companyShortName}} must acknowledge in writing to our customers that we are responsible for the security of account data possessed, stored, processed or transmitted on behalf of the customer, and must also accept responsibility to the extent that we could impact the security of the customer's Cardholder Data Environment (CDE).
+
+{{companyShortName}} must support our customers' requests for information to meet PCI DSS compliance requirements by providing the following upon request:
+
+* PCI DSS compliance status information for any service performed on behalf of the customers (Requirement 12.8.4).
+
+* Information regarding which PCI DSS requirements are our responsibility which are the responsibility of the customer, including any shared responsibilities (Requirement 12.8.5).
+
+* Response template:
+
+By providing services to the entity, {{companyShortName}} acknowledges and agrees that it is responsible for maintaining the security of any account data it possesses, stores, processes, or transmits on behalf of the entity, or to the extent that it could impact the security of the entity's Cardholder Data Environment (CDE) and customers cardholder data, in accordance with the Payment Card Industry Data Security Standard (PCI DSS) and any other applicable laws, regulations, or industry standards. {{companyShortName}} further acknowledges and agrees to implement and maintain appropriate security measures and controls to safeguard such data, including but not limited to encryption, access controls, monitoring, and incident response. {{companyShortName}} shall promptly notify the entity of any actual or suspected security breach or unauthorized access to such data and shall cooperate with the entity in investigating and resolving such incidents. This provision shall survive the termination or expiration of any agreement or relationship between the parties.
+
 ## Requirement 12.9.2
 
 {{companyShortName}} responds in a timely manner to customers and TPSP requests for documentation related to our compliance posture. Our AOC and security policies are always available on line at [https://compliance.aboveproperty.com](https://compliance.aboveproperty.com)
